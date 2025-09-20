@@ -97,8 +97,12 @@ const HomePage = () => {
                     .map((carItem) => (
                       <CarCard
                         key={carItem.id}
-                        link={`${window.location.origin}/car/${carItem.slug}`}
-                        onHandleAction={() => navigate(`/car/${carItem.slug}`)}
+                        link={`/${window.location.origin}/${carItem?.category.slug}/${carItem?.subcategory.slug}/car/${carItem?.slug}`}
+                        onHandleAction={() =>
+                          navigate(
+                            `/${carItem?.category.slug}/${carItem?.subcategory.slug}/car/${carItem?.slug}`
+                          )
+                        }
                         price={carItem.pricePerDay}
                         imgUrl={
                           carItem?.images?.[0]?.url
