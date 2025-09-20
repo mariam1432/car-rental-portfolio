@@ -191,14 +191,12 @@ const CarTypePage = () => {
 
   return (
     <Layout>
-      <div className="bg-gray-50 py-8">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="bg-white rounded-xl shadow-sm p-6 mb-8">
-            {renderSubcategoryNavigation()}
-            {renderBrandLogos()}
-          </div>
-          {renderSubcategorySections()}
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="p-6 mb-8">
+          {renderSubcategoryNavigation()}
+          {renderBrandLogos()}
         </div>
+        {renderSubcategorySections()}
       </div>
     </Layout>
   );
